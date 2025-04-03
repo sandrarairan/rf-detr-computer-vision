@@ -76,10 +76,3 @@ Esta etapa implementa seguimiento de objetos, permitiendo identificar y seguir i
 En la etapa final, refinamos la detección para enfocarnos en clases específicas y generar estadísticas avanzadas.
 
 
-@article{rf-detr2023,
-  title={RF-DETR: Robust Feature Detection Transformer for Computer Vision},
-  author={Sandra Rairan et al.},
-  journal={ArXiv},
-  year={2023}
-}
-```
