@@ -1,7 +1,5 @@
 # RF-DETR: La Revolución en Computer Vision
 
-![RF-DETR Banner](https://github.com/sandrarairan/rf-detr-computer-vision/raw/main/images/banner.png)
-
 ## ¿Qué es RF-DETR?
 
 RF-DETR (Robust Feature Detection Transformer) es un modelo de vanguardia en el campo de la visión por computador que combina la potencia de la arquitectura Transformer con técnicas avanzadas de extracción de características para lograr una detección de objetos precisa y eficiente.
@@ -60,65 +58,24 @@ python scripts/download_models.py
 
 La primera etapa te permite detectar objetos en imágenes estáticas, sirviendo como fundamento para entender el funcionamiento del modelo.
 
-```python
-python scripts/detect_images.py --input-dir images/ --output-dir results/ --model base
-```
-
-[Ver implementación detallada →](scripts/detect_images.py)
 
 ### Etapa 2: Detección de Objetos en Video (Análisis Frame-by-Frame)
 
 En esta etapa, extendemos la detección a videos, procesando cada frame individualmente.
 
-```python
-python scripts/detect_video.py --input video.mp4 --output video_detected.mp4 --model large
-```
-
-[Ver implementación detallada →](scripts/detect_video.py)
-
 ### Etapa 3: ¡Detección en Tiempo Real con Webcam!
 
 Ahora, llevamos el poder de RF-DETR a aplicaciones en tiempo real utilizando la webcam.
-
-```python
-python scripts/detect_webcam.py --model base --confidence 0.6
-```
-
-[Ver implementación detallada →](scripts/detect_webcam.py)
 
 ### Etapa 4: Tracking de Objetos Únicos (Guardando Recortes y JSON)
 
 Esta etapa implementa seguimiento de objetos, permitiendo identificar y seguir instancias específicas a lo largo del tiempo.
 
-```python
-python scripts/track_objects.py --input video.mp4 --output tracking_results/ --save-crops --export-json
-```
-
-[Ver implementación detallada →](scripts/track_objects.py)
-
 ### Etapa 5: Detección Selectiva, Prioridades y Estadísticas
 
 En la etapa final, refinamos la detección para enfocarnos en clases específicas y generar estadísticas avanzadas.
 
-```python
-python scripts/selective_detection.py --input video.mp4 --classes person,car,dog --priority person --generate-stats
-```
 
-[Ver implementación detallada →](scripts/selective_detection.py)
-
-## Contribuciones
-
-Las contribuciones son bienvenidas. Por favor, siéntete libre de abrir issues o enviar pull requests.
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
-
-## Cita
-
-Si utilizas RF-DETR en tu investigación o proyecto, por favor cita:
-
-```
 @article{rf-detr2023,
   title={RF-DETR: Robust Feature Detection Transformer for Computer Vision},
   author={Sandra Rairan et al.},
